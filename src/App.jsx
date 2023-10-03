@@ -58,14 +58,14 @@ const App = () => {
         <button className="prev-btn" onClick={prevPerson}>
           <FaChevronLeft />
         </button>
-        <button className="next-btn" onClick={nextPerson}>
-          <FaChevronRight />
-        </button>
         <button
           className="btn btn-hipster"
           onClick={randomPerson}
         >
           Suprise Me
+        </button>
+        <button className="next-btn" onClick={nextPerson}>
+          <FaChevronRight />
         </button>
       </div>
     </article>
