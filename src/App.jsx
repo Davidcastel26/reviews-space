@@ -35,6 +35,14 @@ const App = () => {
     })
   }
 
+  const randomPerson = () => {
+    let randomNumber = Math.floor(Math.random() * people.length)
+    if( randomNumber === index ){
+      randomNumber = index + 1;
+    }
+    setIndex( checkNumber(randomNumber) )
+  }
+
   return (<main>
     <article className="review">
       <div className="img-container">
@@ -52,6 +60,12 @@ const App = () => {
         </button>
         <button className="next-btn" onClick={nextPerson}>
           <FaChevronRight />
+        </button>
+        <button
+          className="btn btn-hipster"
+          onClick={randomPerson}
+        >
+          Suprise Me
         </button>
       </div>
     </article>
